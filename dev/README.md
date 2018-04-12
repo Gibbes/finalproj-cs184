@@ -1,6 +1,6 @@
 # Development Zone!
 
-Hey 184 group! :D
+Hey 184 group! :D This is my documentation of my attempts to display the project on our website.
 
 ## Current Status
 
@@ -9,8 +9,6 @@ Node.js setup seems to require quite a lot of troubleshooting. Basically it's be
 The current hitch:
 
 - `Syntax error: unexpected character on line 1, '<'`
-
-I expect it may be a problem with Firefox and am currently troubleshooting. Feel free to jump in. 
 
 ## Solutions to Old Bugs
 
