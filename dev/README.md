@@ -26,4 +26,4 @@ May also encounter uninstalled dependencies:
 
 - `npm install --save 'name of dependency'`
 
-Haven't figured out a way to automatically get dependencies yet. Happy noding!
+As far as I know, I should have included them all inside `package.json`.
