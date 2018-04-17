@@ -39,6 +39,7 @@ function init() {
 
     for(var i = 0, len = geometryFaces.length; i < len; i++) {
         face = geometryFaces[i];
+		console.log(face);
         vertex = geometryVertices[face.a];
         p0x = vertex.x;
         p0y = vertex.y;
