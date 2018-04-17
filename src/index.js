@@ -321,7 +321,7 @@ mobile.pass(function() {
     //     }
     // });
 
-    quickLoader.add('models/LeePerrySmith.json', {
+    quickLoader.add('models/teapot.json', {
         onLoad: function(data) {
             settings.headData = data;
         }
