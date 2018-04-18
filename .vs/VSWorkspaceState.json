@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\models",
+    "\\src",
+    "\\src\\3d",
+    "\\src\\fallback",
+    "\\src\\glsl",
+    "\\src\\helpers"
+  ],
+  "SelectedNode": "\\src\\3d\\head.js",
+  "PreviewInSolutionExplorer": false
+}
