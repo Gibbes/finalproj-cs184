@@ -35,13 +35,16 @@
 		<!-- Begin Menu -->
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item active">
-			<a class="nav-link" href="index.html" style="color: white">Deliverable <span class="sr-only">(current)</span></a>
+			<a class="nav-link" href="proposal.html" style="color: white">Proposal</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="index.html" style="color: white">Milestone<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
 			<a class="nav-link" href="https://cs184.eecs.berkeley.edu/article/34" style="color: white" target="_blank">Spec</a>
 			</li>
 			<li class="nav-item">
-			<a class="nav-link" href="https://github.com/Gibbes/finalproj-cs184" style="color: white" target="_blank">GitHub</a>
+			<a class="nav-link" href="https://github.com/Michael-Tu/cs184-final-project" style="color: white" target="_blank">GitHub</a>
 			</li>
 		</ul>
 		<!-- End Menu -->
@@ -86,99 +89,62 @@
 			</div>
 
 			<!-- Begin Featured Image -->
-			<img class="featured-image img-fluid" src="./assets/img/post/cover.png" alt="particle - dynamic interaction system">
+			<img class="featured-image img-fluid" src="./assets/img/post/milestone.png" alt="particle - dynamic interaction system">
 			<!-- End Featured Image -->
 
 			<!-- Begin Post Content -->
 			<div class="article-post">
-        <h2 id="summary"><b>Summary</b></h2>
+        <h2 id="milestone"><b>Milestone : Monday, 23 April 2018</b></h2>
 
-        <p>Our final project will be a Real-Time Dynamic Physics-Based Particle Simulation and Interaction System. We plan to build a WebGL framework where users can interact with the system to simulate some cool physics-based particle effects on scenes in real time. The list of desired effects include smashing and destruction of objects, wind blowing of particles, water simulation, cloth simulation, and many more.</p>
+        <p>The Real-Time Dynamic Physics-Based Particle Simulation and Interaction System milestone page aims to show our progress to date. The original proposal states: </p>
+        
+			<ul>
+				<li>"...users can smash objects of their choice into each other, causing tiny sand-like debris particles to disperse around the scene."</li>
+				<li>"We plan to achieve these effects by leveraging existing JavaScript libraries for WebGL such as three.js... We will incorporate and build upon existing open-source graphics work as well."</li>
+			</ul>
+        
+        <p>Let's review how much of our primary goal we've accomplished!</p>
 
-        <p>
-          Our team consists of the following awesome members:
-          <ul>
-            <li>Gan Tu (cs184-adt): 26070763</li>
-            <li>Michael Gibbes (cs184-aby): 26115555</li>
-            <li>Noah Jacobs (cs184-abr): 25995966</li>
-          </ul>
-        </p>
+        <h2 id="preliminary-results"><b>Preliminary Results</b></h2>
 
-        <h2 id="problem-description"><b>Problem Description</b></h2>
+        <p>Currently, we have a dynamic scene in which the user can shoot balls in a chosen direction via mouse click. This scene uses a modified version of an example system using <a href="https://github.com/kripken/ammo.js/">Ammo</a>, a JavaScript physics library converted from C.</p>
+        
+        <ol>
+        	<li><b>Inclusion of Custom Mesh Elements</b>: Originally, the scene contained only simple convex geometries. Now, it contains complex meshes that shatter on impact, including classics such as the Utah Teapot and the Stanford Bunny.</li>
+        	<li><b>Particle Effects</b>: This "particular" option is enabled for complex meshes such as the teapot. It causes the mesh to disintegrate into sand-like particles that are affected by gravity.</li>
+        	<li><b>Expansive GUI</b>: The drop-down menu we implemented uses the <a href="https://github.com/dataarts/dat.gui">dat.GUI</a> interface to offer the user a wide variety of options for destructive pleasure.</li>
+        </ol>
 
-        <p>In this class so far, we have explored various methods of graphic rendering and material rendering techniques. However, there is a very limited coverage of physical simulation, except for the cloth simulation project. Physical simulation is extremely important in real world. It plays a vital role in many areas such as gaming, galaxy simulation for physics research, motion capture, animation, VR/AR, etc.</p>
+        <h2 id="updated-plan"><b>Updated Plan</b></h2>
 
-        <p>To further our knowledge and experience in physical simulation, we think a final project on particle simulation would be a great way to tackle the challenge of physical simulation. It's challenging because physical simulation is naturally computationally intensive as it involves simulating, in real time, the behaviors of a large amount of objects within a very complex and mutually dependent system, where objects are highly interactive with each other under rules of physics.</p>
+        <p>Of course, the tentative plan in the proposal should be updated to reflect our progress thus far. The framework we implemented has many features, but there are yet more features and revisions in the works. </p>
 
-        <p>In our project, we will try to make an interactive WebGL framework where users can smash objects of their choice into each other, causing tiny sand-like debris particles to disperse around the scene. Users can create custom-simulated wind effects to blow these sand-like particles around in the scene. Potentially, if time permitting, we plan to implement and enable features such as glass shattering effects, flood simulation (where water floods the scene and interacts with the objects in the scene), and some interactive effects with cloths.</p>
+			<ul>
+				<li><b>Final Week, 04/23 - 04/29:</b>
+				  <ul>
+					<li>Make mesh-breaking more believable (i.e. more accurate shattering/particle effects)</li>
+					<li>Polish visuals and textures to maximize aesthetic beauty</li>
+					<li>Final Presentation Preparation: Videos and Presentations</li>
+					<li>Final Report Webpage and Project Video</li>
+					<li>Bug fixes and any UI/UX improvement</li>
+					<li>If possible, add other features such as wind or cloth.</li>
+				  </ul>
+				</li>
+			</ul>
+        
+        <h2 id="milestone-video"><b>Milestone Video</b></h2>
+        
+		<p><font color="red">Insert link to video when finished.</font></p>
+        
+        <h2 id="milestone-slides"><b>Milestone Slides</b></h2>
+        
+        <p><a href="https://docs.google.com/presentation/d/1OH7ctlgpcokAWNUnIhgt9W3Hku62UYP2P92bHuNnEes/edit?usp=sharing">These slides</a> are used in the making of the milestone video.</p>
 
-        <p>We plan to achieve these effects by leveraging existing JavaScript libraries for WebGL such as three.js. We will read research work on relevant physical simulation for tasks such as wind effects and water simulation. We will incorporate and build upon existing open-source graphics work as well.</p>
+        <h2 id="updated-resources"><b>Updated Resources</b></h2>
 
-        <h2 id="goal-and-deliverable"><b>Goals and Deliverables</b></h2>
+        <p>The libraries we've taken advantage of most thus far include three.js, node.js, and ammo.js, among others. The scene framework itself is built on an existing model, <a href="https://threejs.org/examples/#webgl_physics_convex_break">the convex object breaker</a>.</p>
 
-        <p>To have a successful project, our baseline plan is to build a WebGL framework that can at least simulate both the wind-particle interaction effects and the smash-destruction particle effects between pre-defined objects, as described from the previous section.</p>
-
-        <p>If things go well and we get ahead of our schedule, our aspiration plan is to enable custom objects for the smash-destruction particle effect. We also would like to add features to allow flood simulation, where water floods the scene and interacts with the objects in the scene, and material specific effects such as glass shattering, wood dents, and cloth interactions with wind and objects.</p>
-
-        <h2 id="schedule"><b>Schedule</b></h2>
-
-        <p>
-
-        To accomplish the project, we define the following high level tasks for execution. Our preliminary plan of action over the upcoming weeks is as follows:
-
-          <ul>
-            <li><b>Week 1, 04/2 - 04/8:</b>
-              <ul>
-                <li>Project Proposal</li>
-                <li>Familiarize with three.js</li>
-                <li>Familiarize with Node.js and other potential JavaScript library for the webapp development</li>
-                <li>Explore academic work for particle simulation and interactions</li>
-                <li>Explore existing mesh models to use for project</li>
-                <li>Explore existing open-source projects using three.js</li>
-                <li>Explore existing open-source projects on physical and particle simulation</li>
-              </ul>
-            </li>
-
-            <li><b>Week 2, 04/9 - 04/15:</b>
-              <ul>
-                <li>Develop the main UI/UX interface for our interactive WebGL webapp</li>
-                <li>Continue to familiarize ourself with three.js and Node.js, etc.</li>
-                <li>Start to develop smash-destruction particle effects</li>
-                <li>Start to develop wind-particle interaction effects</li>
-              </ul>
-            </li>
-
-            <li><b>Week 3, 04/16 - 04/22:</b>
-              <ul>
-                <li>Finalize smash-destruction particle effects</li>
-                <li>Finalize wind-particle interaction effects</li>
-                <li>Develop new features and interactive demos from our aspirational plans</li>
-                <li>Milestone Deliverables: Report Webpage, Video, Slides</li>
-                <li>Bug fixes.</li>
-              </ul>
-            </li>
-
-            <li><b>Week 4, 04/23 - 04/29:</b>
-              <ul>
-                <li>Finalize any on-going new features and demos from our aspirational plan</li>
-                <li>Finalize the project and webapp demos</li>
-                <li>Final Presentation Preparation: Posters and Videos</li>
-                <li>Final Report Webpage and Project Video</li>
-                <li>Bug fixes and any UI/UX improvement</li>
-              </ul>
-            </li>
-          </ul>
-
-        </p>
-
-
-        <h2 id="resources"><b>Resources</b></h2>
-
-        <p>We will use our own laptops, running either Mac or Windows, for the development of our web app, collaborating through GitHub. We plan to use three.js <i>extensively</i> for this project, along with other web development framework and JavaScript libraries such as Node.js. We may use web hosting platforms such as Heroku for web app hosting, and use existing object mesh models developed and shared online for rendering purposes.</p>
-
-        <p>We will look into open-source resources of exiting simulation works for inspiration, reference, and platforms to build upon as well. Some, but not all, reference sources right now are project demos by the three.js page, experiments with Google, and developer Edan Kwan's work portfolio.</p>
-
-        <p>Below are some links to some of the resources that will be helpful for the development of our project:</p>
+        <p>Below are some links to resources that have inspired our current features:</p>
 
         <ul>
           <li><a href="https://threejs.org" target="_blank">https://threejs.org</a></li>
@@ -203,8 +169,8 @@
 				<ul class="tags">
 					<li><a href="#" class="disabled">Particle Simulation</a></li>
 					<li><a href="#" class="disabled">Physical Interaction</a></li>
-          <li><a href="#" class="disabled">Real-Time WebGL</a></li>
-					<li><a href="#" class="disabled">Project Proposal</a></li>
+          			<li><a href="#" class="disabled">Real-Time WebGL</a></li>
+					<li><a href="#" class="disabled">Project Milestone</a></li>
 					<li><a href="#" class="disabled">Computer Graphics</a></li>
 				</ul>
 			</div>

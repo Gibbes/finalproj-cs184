@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="CS184 Final Project Proposal">
+<meta name="author" content="">
+<link rel="icon" href="assets/img/favicon.ico">
+<title>CS184 Final Project Proposal</title>
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<!-- Fonts -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/font.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="assets/css/mediumish.css" rel="stylesheet">
+<link href="assets/css/monokai-sublime.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Begin Nav
+================================================== -->
+<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation" style="background-color: black">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="container">
+	<!-- Begin Logo -->
+	<a class="navbar-brand" href="index.html">
+	<img src="./assets/img/logo-light.png" alt="logo">
+	</a>
+	<!-- End Logo -->
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<!-- Begin Menu -->
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+			<a class="nav-link" href="proposal.html" style="color: white">Proposal<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="index.html" style="color: white">Milestone</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="https://cs184.eecs.berkeley.edu/article/34" style="color: white" target="_blank">Spec</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="https://github.com/Michael-Tu/cs184-final-project" style="color: white" target="_blank">GitHub</a>
+			</li>
+		</ul>
+		<!-- End Menu -->
+	</div>
+</div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+
+<!-- Return to Top -->
+<a href="javascript:" id="return-to-top">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+<!-- Begin Article
+================================================== -->
+<div class="container">
+	<div class="row">
+
+		<div class="col-md-1 col-xs-12"></div>
+		<!-- Begin Post -->
+		<div class="col-md-10 col-md-offset-2 col-xs-12">
+			<div class="mainheading">
+
+				<!-- Begin Top Meta -->
+				<div class="row post-top-meta">
+					<div class="col-md-2">
+						<a disabled><img class="author-thumb" src="./assets/img/profile.png" alt="Cool Profile Photo -- Dots"></a>
+					</div>
+					<div class="col-md-10">
+						<a class="link-dark" disabled>Gan Tu, Michael Gibbes, Noah Jacobs</a>
+						<span class="author-description">Student of CS 184: Computer Graphics and Imaging, Spring 2018 at UC Berkeley.</span><br>
+						<span class="post-date" id="post-date">April, 2018</span><span class="dot"></span><span class="post-read">10 min read</span>
+					</div>
+				</div>
+				<!-- End Top Menta -->
+
+				<h1 class="posttitle">Dynamic Particle Interaction System </h1>
+
+			</div>
+
+			<!-- Begin Featured Image -->
+			<img class="featured-image img-fluid" src="./assets/img/post/cover.png" alt="particle - dynamic interaction system">
+			<!-- End Featured Image -->
+
+			<!-- Begin Post Content -->
+			<div class="article-post">
+        <h2 id="summary"><b>Summary</b></h2>
+
+        <p>Our final project will be a Real-Time Dynamic Physics-Based Particle Simulation and Interaction System. We plan to build a WebGL framework where users can interact with the system to simulate some cool physics-based particle effects on scenes in real time. The list of desired effects include smashing and destruction of objects, wind blowing of particles, water simulation, cloth simulation, and many more.</p>
+
+        <p>
+          Our team consists of the following awesome members:
+          <ul>
+            <li>Gan Tu (cs184-adt): 26070763</li>
+            <li>Michael Gibbes (cs184-aby): 26115555</li>
+            <li>Noah Jacobs (cs184-abr): 25995966</li>
+          </ul>
+        </p>
+
+        <h2 id="problem-description"><b>Problem Description</b></h2>
+
+        <p>In this class so far, we have explored various methods of graphic rendering and material rendering techniques. However, there is a very limited coverage of physical simulation, except for the cloth simulation project. Physical simulation is extremely important in real world. It plays a vital role in many areas such as gaming, galaxy simulation for physics research, motion capture, animation, VR/AR, etc.</p>
+
+        <p>To further our knowledge and experience in physical simulation, we think a final project on particle simulation would be a great way to tackle the challenge of physical simulation. It's challenging because physical simulation is naturally computationally intensive as it involves simulating, in real time, the behaviors of a large amount of objects within a very complex and mutually dependent system, where objects are highly interactive with each other under rules of physics.</p>
+
+        <p>In our project, we will try to make an interactive WebGL framework where users can smash objects of their choice into each other, causing tiny sand-like debris particles to disperse around the scene. Users can create custom-simulated wind effects to blow these sand-like particles around in the scene. Potentially, if time permitting, we plan to implement and enable features such as glass shattering effects, flood simulation (where water floods the scene and interacts with the objects in the scene), and some interactive effects with cloths.</p>
+
+        <p>We plan to achieve these effects by leveraging existing JavaScript libraries for WebGL such as three.js. We will read research work on relevant physical simulation for tasks such as wind effects and water simulation. We will incorporate and build upon existing open-source graphics work as well.</p>
+
+        <h2 id="goal-and-deliverable"><b>Goals and Deliverables</b></h2>
+
+        <p>To have a successful project, our baseline plan is to build a WebGL framework that can at least simulate both the wind-particle interaction effects and the smash-destruction particle effects between pre-defined objects, as described from the previous section.</p>
+
+        <p>If things go well and we get ahead of our schedule, our aspiration plan is to enable custom objects for the smash-destruction particle effect. We also would like to add features to allow flood simulation, where water floods the scene and interacts with the objects in the scene, and material specific effects such as glass shattering, wood dents, and cloth interactions with wind and objects.</p>
+
+        <h2 id="schedule"><b>Schedule</b></h2>
+
+        <p>
+
+        To accomplish the project, we define the following high level tasks for execution. Our preliminary plan of action over the upcoming weeks is as follows:
+
+          <ul>
+            <li><b>Week 1, 04/2 - 04/8:</b>
+              <ul>
+                <li>Project Proposal</li>
+                <li>Familiarize with three.js</li>
+                <li>Familiarize with Node.js and other potential JavaScript library for the webapp development</li>
+                <li>Explore academic work for particle simulation and interactions</li>
+                <li>Explore existing mesh models to use for project</li>
+                <li>Explore existing open-source projects using three.js</li>
+                <li>Explore existing open-source projects on physical and particle simulation</li>
+              </ul>
+            </li>
+
+            <li><b>Week 2, 04/9 - 04/15:</b>
+              <ul>
+                <li>Develop the main UI/UX interface for our interactive WebGL webapp</li>
+                <li>Continue to familiarize ourself with three.js and Node.js, etc.</li>
+                <li>Start to develop smash-destruction particle effects</li>
+                <li>Start to develop wind-particle interaction effects</li>
+              </ul>
+            </li>
+
+            <li><b>Week 3, 04/16 - 04/22:</b>
+              <ul>
+                <li>Finalize smash-destruction particle effects</li>
+                <li>Finalize wind-particle interaction effects</li>
+                <li>Develop new features and interactive demos from our aspirational plans</li>
+                <li>Milestone Deliverables: Report Webpage, Video, Slides</li>
+                <li>Bug fixes.</li>
+              </ul>
+            </li>
+
+            <li><b>Week 4, 04/23 - 04/29:</b>
+              <ul>
+                <li>Finalize any on-going new features and demos from our aspirational plan</li>
+                <li>Finalize the project and webapp demos</li>
+                <li>Final Presentation Preparation: Posters and Videos</li>
+                <li>Final Report Webpage and Project Video</li>
+                <li>Bug fixes and any UI/UX improvement</li>
+              </ul>
+            </li>
+          </ul>
+
+        </p>
+
+
+        <h2 id="resources"><b>Resources</b></h2>
+
+        <p>We will use our own laptops, running either Mac or Windows, for the development of our web app, collaborating through GitHub. We plan to use three.js <i>extensively</i> for this project, along with other web development framework and JavaScript libraries such as Node.js. We may use web hosting platforms such as Heroku for web app hosting, and use existing object mesh models developed and shared online for rendering purposes.</p>
+
+        <p>We will look into open-source resources of exiting simulation works for inspiration, reference, and platforms to build upon as well. Some, but not all, reference sources right now are project demos by the three.js page, experiments with Google, and developer Edan Kwan's work portfolio.</p>
+
+        <p>Below are some links to some of the resources that will be helpful for the development of our project:</p>
+
+        <ul>
+          <li><a href="https://threejs.org" target="_blank">https://threejs.org</a></li>
+          <li><a href="https://experiments.withgoogle.com/chrome?tag=WebGL" target="_blank">https://experiments.withgoogle.com/chrome?tag=WebGL</a></li>
+          <li><a href="http://edankwan.com" target="_blank">http://edankwan.com</a></li>
+          <li><a href="http://vaalentin.github.io/2015/" target="_blank">http://vaalentin.github.io/2015/</a></li>
+          <li><a href="http://particle-love.com" target="_blank">http://particle-love.com</a></li>
+          <li><a href="https://github.com/edankwan/touch-leap-motion" target="_blank">https://github.com/edankwan/touch-leap-motion</a></li>
+          <li><a href="http://edankwan.com/experiments/smashing-mega-scene/" target="_blank">http://edankwan.com/experiments/smashing-mega-scene/</a></li>
+          <li><a href="https://experiments.withgoogle.com/chrome/smashing-mega-scene" target="_blank">https://experiments.withgoogle.com/chrome/smashing-mega-scene</a></li>
+        </ul>
+
+
+
+
+
+			</div>
+			<!-- End Post Content -->
+
+			<!-- Begin Tags -->
+			<div class="after-post-tags">
+				<ul class="tags">
+					<li><a href="#" class="disabled">Particle Simulation</a></li>
+					<li><a href="#" class="disabled">Physical Interaction</a></li>
+          <li><a href="#" class="disabled">Real-Time WebGL</a></li>
+					<li><a href="#" class="disabled">Project Proposal</a></li>
+					<li><a href="#" class="disabled">Computer Graphics</a></li>
+				</ul>
+			</div>
+			<!-- End Tags -->
+
+		</div>
+		<!-- End Post -->
+
+	</div>
+</div>
+<!-- End Article
+================================================== -->
+
+<div class="hideshare"></div>
+
+<!-- Begin Footer
+================================================== -->
+<div class="container">
+	<div class="footer">
+		<p class="pull-left">
+			 Copyright &copy; CS 184: Computer Graphics and Imaging, Spring 2018
+		</p>
+		<p class="pull-right">
+			 Gan Tu, Michael Gibbes, Noah Jacobs
+		</p>
+		<div class="clearfix">
+		</div>
+	</div>
+</div>
+<!-- End Footer
+================================================== -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/tether.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="./assets/js/mediumish.js"></script>
+<script src="./assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+	// ===== Scroll to Top ====
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+// update date automatically
+// var d = new Date();
+// var months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+// var dateToShow = d.getDate();
+// dateToShow = dateToShow + " " + months[d.getMonth()];
+// dateToShow = dateToShow + " ";
+// dateToShow = dateToShow + d.getFullYear();
+// document.getElementById("post-date").innerHTML = dateToShow;
+</script>
+</body>
+</html>
