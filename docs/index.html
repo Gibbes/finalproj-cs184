@@ -120,33 +120,36 @@
         <p>Currently, we have a dynamic scene in which the user can shoot balls in a chosen direction via mouse click. This scene uses a modified version of an example system using <a href="https://github.com/kripken/ammo.js/">Ammo</a>, a JavaScript physics library converted from C.</p>
 
         <ol>
-        	<li><b>Inclusion of Custom Mesh Elements</b>: Originally, the scene contained only simple convex geometries. Now, it contains complex meshes that shatter on impact, including classics such as the Utah Teapot and the Stanford Bunny.</li>
+        	<li><b>Inclusion of Custom Mesh Elements</b>: Originally, the scene contained only simple convex geometries. Now, it contains complex meshes from custom 3D object files that shatter on impact, including classics such as the Utah Teapot and the Stanford Bunny.</li>
         	<li><b>Particle Effects</b>: This "particular" option is enabled for complex meshes such as the teapot. It causes the mesh to disintegrate into sand-like particles that are affected by gravity.</li>
-        	<li><b>Expansive GUI</b>: The drop-down menu we implemented uses the <a href="https://github.com/dataarts/dat.gui">dat.GUI</a> interface to offer the user a wide variety of options for destructive pleasure. Features...
+        	<li><b>Expansive GUI</b>: The drop-down menu we implemented uses the <a href="https://github.com/dataarts/dat.gui">dat.GUI</a> interface to offer the user a wide variety of options for destructive pleasure. It also gives users controls over many simulation parameters. Features implemented so far include such as:
         		<ul>
-        			<li>dynamic mass and ball size.</li>
-        			<li>particle movement and generation adjustments.</li>
+        			<li>dynamic object mass and ball size.</li>
+        			<li>particle movement and generation adjustments</li>
+                    <li>add as many domino stones as you like</li>
         			<li>ball brigade -- let destruction fill the sky!</li>
+                    <li>flying Particles fireworks</li>
+                    <li>any many more!</li>
         		</ul>
         	</li>
         </ol>
+
 
         <h2 id="updated-plan"><b>Updated Plan</b></h2>
 
         <p>Of course, the tentative plan in the proposal should be updated to reflect our progress thus far. The framework we implemented has many features, but there are yet more features and revisions in the works. </p>
 
-			<ul>
-				<li><b>Final Week, 04/23 - 04/29:</b>
-				  <ul>
-					<li>Make mesh-breaking more believable (i.e. more accurate shattering/particle effects)</li>
-					<li>Polish visuals and textures to maximize aesthetic beauty</li>
-					<li>Final Presentation Preparation: Videos and Presentations</li>
-					<li>Final Report Webpage and Project Video</li>
-					<li>Bug fixes and any UI/UX improvement</li>
-					<li>If possible, add other features such as wind or cloth.</li>
-				  </ul>
-				</li>
-			</ul>
+        <p>So far, we have mainly be working on the backend functionalities that are needed to achieve various effects and simulations we intended, and made satisfiable progress.</p>
+
+        <p>However, our scene still looks like similar to the setup of the three.js example that we based on project on in terms of the scene layout. Therefore, we plan to work on the front end more and completely change our scene to be more meaningful and visually pleasing. </p>
+
+        <p>Specifically, we plan to setup our animations to be a mini simulated <b>Stonehenge</b>, with many carefully chosen, cool mesh objects integrated to provide a ritualized atmosphere.</p>
+
+        <img class="featured-image img-fluid" src="./assets/img/post/stonehenge.jpg" alt="Stonehenge">
+
+        <p>In terms of functionalities, we plan to continue adding features such as wind-particle effects, flood simulations, and cloth animation, etc. We also may add options so that users can choose to drag objects in the scene around, instead of shooting balls to directly smash into the objects.</p>
+
+        <p>We will also work to make mesh-breaking more believable (i.e. more accurate shattering/particle effects), polish visuals and textures to maximize aesthetic beauty, and prepare for the final presentation by working on the final video, presentation, webpage, etc.</p>
 
         <h2 id="milestone-video"><b>Milestone Video</b></h2>
 
