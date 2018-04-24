@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="CS184 Final Project Proposal">
+<meta name="description" content="CS184 Final Project Milestone">
 <meta name="author" content="">
 <link rel="icon" href="assets/img/favicon.ico">
-<title>CS184 Final Project Proposal</title>
+<title>CS184 Final Project Milestone</title>
 <!-- Bootstrap core CSS -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 <!-- Fonts -->
@@ -40,6 +40,9 @@
 			<li class="nav-item">
 			<a class="nav-link" href="index.html" style="color: white">Milestone<span class="sr-only">(current)</span></a>
 			</li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://michael-tu.github.io/cs184-final-project/index.html" style="color: white">Live Demo</a>
+              </li>
 			<li class="nav-item">
 			<a class="nav-link" href="https://cs184.eecs.berkeley.edu/article/34" style="color: white" target="_blank">Spec</a>
 			</li>
@@ -96,12 +99,19 @@
 			<div class="article-post">
         <h2 id="milestone"><b>Milestone : Monday, 23 April 2018</b></h2>
 
-        <p>The Real-Time Dynamic Physics-Based Particle Simulation and Interaction System milestone page aims to show our progress to date. The original proposal states: </p>
+        <p>The Real-Time Dynamic Physics-Based Particle Simulation and Interaction System milestone page aims to show our progress to date. The original proposal states that we plan to build an interactive WebGL framework where users can smash objects of their choice into each other, causing tiny sand-like debris particles to disperse around the scene. </p>
+
+        <p>Our aspired functionalities include: </p>
 
 			<ul>
-				<li>"...users can smash objects of their choice into each other, causing tiny sand-like debris particles to disperse around the scene."</li>
-				<li>"We plan to achieve these effects by leveraging existing JavaScript libraries for WebGL such as three.js... We will incorporate and build upon existing open-source graphics work as well."</li>
+                <li>smash-destruction particle effects</li>
+                <li>wind-particle interaction effects</li>
+                <li>glass shattering effects </li>
+                <li>flood simulation</li>
+                <li>cloths animation</li>
 			</ul>
+
+        <p>We achieve these effects by leveraging existing JavaScript libraries for WebGL such as three.js. We incorporated and built upon existing open-source graphics work as well.</p>
 
         <p>Let's review how much of our primary goal we've accomplished!</p>
 
@@ -140,31 +150,29 @@
 
         <h2 id="milestone-video"><b>Milestone Video</b></h2>
 
-				<p><a href="https://www.youtube.com/watch?v=xhZtLSZJTko&feature=youtu.be" target="_blank">This video</a> demonstrates what we've done so far. The slides linked below serve as a narrated description of the milestone video.</p>
+				<p><a href="https://www.youtube.com/watch?v=xhZtLSZJTko&feature=youtu.be" target="_blank">This video</a> demonstrates what we've done so far with demos of our project.</p>
 
         <h2 id="milestone-slides"><b>Milestone Slides</b></h2>
 
         <p><a href="https://docs.google.com/presentation/d/1OH7ctlgpcokAWNUnIhgt9W3Hku62UYP2P92bHuNnEes/edit?usp=sharing" target="_blank">These slides</a> are used to complement the milestone video. They also contain the narrative blueprints for next week's plan.</p>
 
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRNh-8v9bS9A78aWZJ4p3CAsxg_ed1LT1b4_gfjDrzEQuSBRfv7rsxlhuQ7-6u3VYqhqFdxf05w2B-E/embed?start=false&loop=false&delayms=5000" frameborder="0" width="640" height="404" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
         <h2 id="updated-resources"><b>Updated Resources</b></h2>
 
-        <p>The libraries we've taken advantage of most thus far include three.js, node.js, and ammo.js, among others. The scene framework itself is built on an existing model, <a href="https://threejs.org/examples/#webgl_physics_convex_break">the convex object breaker</a>.</p>
+        <p>The libraries we've taken advantage of most thus far include three.js, node.js, and ammo.js, among others. The collision shattering effects is built upon on the <a href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_physics_convex_break.html">the convex object breaker</a> by three.js.</p>
 
-        <p>Below are some links to resources that have inspired our current features:</p>
+        <p>Below are some links to resources that have helped us pick up three.js and/or inspired our current features:</p>
 
         <ul>
-          <li><a href="https://threejs.org" target="_blank">https://threejs.org</a></li>
-          <li><a href="https://experiments.withgoogle.com/chrome?tag=WebGL" target="_blank">https://experiments.withgoogle.com/chrome?tag=WebGL</a></li>
-          <li><a href="http://edankwan.com" target="_blank">http://edankwan.com</a></li>
-          <li><a href="http://vaalentin.github.io/2015/" target="_blank">http://vaalentin.github.io/2015/</a></li>
-          <li><a href="http://particle-love.com" target="_blank">http://particle-love.com</a></li>
-          <li><a href="https://github.com/edankwan/touch-leap-motion" target="_blank">https://github.com/edankwan/touch-leap-motion</a></li>
-          <li><a href="http://edankwan.com/experiments/smashing-mega-scene/" target="_blank">http://edankwan.com/experiments/smashing-mega-scene/</a></li>
-          <li><a href="https://experiments.withgoogle.com/chrome/smashing-mega-scene" target="_blank">https://experiments.withgoogle.com/chrome/smashing-mega-scene</a></li>
+            <li><a href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_points_dynamic.html" target="_blank">Dynamic Particles</a></li>
+            <li><a href="https://threejs.org" target="_blank">https://threejs.org</a></li>
+            <li><a href="http://particle-love.com" target="_blank">http://particle-love.com</a></li>
+            <li><a href="https://codepen.io/Xanmia/pen/DoljI" target="_blank">Particle Explosion</a></li>
+            <li><a href="https://github.com/josdirksen" target="_blank">Three.js Tutorials</a></li>
+            <li><a href="https://github.com/kripken/ammo.js/" target="_blank">Ammo.js</a></li>
+            <li><a href="https://threejs.org/docs/#api/core/Raycaster" target="_blank">Raycaster</a></li>
         </ul>
-
-
-
 
 
 			</div>
