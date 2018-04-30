@@ -85,7 +85,7 @@
 					<div class="col-md-10">
 						<a class="link-dark" disabled>Gan Tu, Michael Gibbes, Noah Jacobs</a>
 						<span class="author-description">Student of CS 184: Computer Graphics and Imaging, Spring 2018 at UC Berkeley.</span><br>
-						<span class="post-date" id="post-date">April, 2018</span><span class="dot"></span><span class="post-read">5 min read</span>
+						<span class="post-date" id="post-date">May, 2018</span><span class="dot"></span><span class="post-read">10 min read</span>
 					</div>
 				</div>
 				<!-- End Top Menta -->
@@ -100,71 +100,35 @@
 
 			<!-- Begin Post Content -->
 			<div class="article-post">
-        <h2 id="milestone"><b>Milestone : Monday, 23 April 2018</b></h2>
+        <h2 id="abstract"><b>Abstract</b></h2>
 
-        <p>The Real-Time Dynamic Physics-Based Particle Simulation and Interaction System milestone page aims to show our progress to date. The original proposal states that we plan to build an interactive WebGL framework where users can smash objects of their choice into each other, causing tiny sand-like debris particles to disperse around the scene. </p>
+		<p><font color="red">Insert Abstract</font></p>
 
-        <p>Our aspired functionalities include: </p>
+        <h2 id="technical"><b>Technical Approach</b></h2>
 
+        <ul>
+        	<li><b>Summary of Approach</b>:
 			<ul>
-                <li>smash-destruction particle effects</li>
-                <li>wind-particle interaction effects</li>
-                <li>glass shattering effects </li>
-                <li>flood simulation</li>
-                <li>cloths animation</li>
+				<li><font color="red">Insert Summary</font></li>	
 			</ul>
+			</li>
+			<li><b>Debugging Journey</b>:
+			<ul>
+				<li><font color="red">Insert Journey</font></li>
+			</ul>
+			</li>
+			<li><b>Lessons Learned</b>:
+			<ul>
+				<li><font color="red">Insert Lessons</font></li>	
+			</ul>
+			</li>
+        </ul>
 
-        <p>We achieve these effects by leveraging existing JavaScript libraries for WebGL such as three.js. We incorporated and built upon existing open-source graphics work as well.</p>
+        <h2 id="results"><b>Results</b></h2>
 
-        <p>Let's review how much of our primary goal we've accomplished!</p>
+        <p><font color="red">Insert Results</font></p>
 
-        <h2 id="preliminary-results"><b>Preliminary Results</b></h2>
-
-        <p>Currently, we have a dynamic scene in which the user can shoot balls in a chosen direction via mouse click. This scene uses a modified version of an example system using <a href="https://github.com/kripken/ammo.js/">Ammo</a>, a JavaScript physics library converted from C.</p>
-
-        <ol>
-        	<li><b>Inclusion of Custom Mesh Elements</b>: Originally, the scene contained only simple convex geometries. Now, it contains complex meshes from custom 3D object files that shatter on impact, including classics such as the Utah Teapot and the Stanford Bunny.</li>
-        	<li><b>Particle Effects</b>: This "particular" option is enabled for complex meshes such as the teapot. It causes the mesh to disintegrate into sand-like particles that are affected by gravity.</li>
-        	<li><b>Expansive GUI</b>: The drop-down menu we implemented uses the <a href="https://github.com/dataarts/dat.gui">dat.GUI</a> interface to offer the user a wide variety of options for destructive pleasure. It also gives users controls over many simulation parameters. Features implemented so far include such as:
-        		<ul>
-        			<li>dynamic object mass and ball size.</li>
-        			<li>particle movement and generation adjustments</li>
-              <li>add as many domino stones as you like</li>
-        			<li>ball brigade -- let destruction fill the sky!</li>
-              <li>flying particle fireworks</li>
-              <li>and many more!</li>
-        		</ul>
-        	</li>
-        </ol>
-
-
-        <h2 id="updated-plan"><b>Updated Plan</b></h2>
-
-        <p>Of course, the tentative plan in the proposal should be updated to reflect our progress thus far. The framework we implemented has many features, but there are yet more features and revisions in the works. </p>
-
-        <p>So far, we have mainly be working on the backend functionalities that are needed to achieve various effects and simulations we intended, and made satisfiable progress.</p>
-
-        <p>However, our scene still looks like similar to the setup of the three.js example that we based on project on in terms of the scene layout. Therefore, we plan to work on the front end more and completely change our scene to be more meaningful and visually pleasing. </p>
-
-        <p>Specifically, we plan to setup our animations to be a mini simulated <b>Stonehenge</b>, with many carefully chosen, cool mesh objects integrated to provide a ritualized atmosphere.</p>
-
-        <img class="featured-image img-fluid" src="./assets/img/post/stonehenge.jpg" alt="Stonehenge">
-
-        <p>In terms of functionalities, we plan to continue adding features such as wind-particle effects, flood simulations, and cloth animation. We also may add options so that users can drag scene primitives around, instead of shooting balls to smash them.</p>
-
-        <p>We will also work to make mesh-breaking more believable (i.e. more accurate shattering/particle effects), polish visuals and textures to maximize aesthetic beauty, and prepare for the final presentation by working on the final video, presentation, webpage, etc.</p>
-
-        <h2 id="milestone-video"><b>Milestone Video</b></h2>
-
-				<p><a href="https://youtu.be/uwCaTOI_PTo">This video</a> demonstrates what we've done so far with demos of our project.</p>
-
-        <h2 id="milestone-slides"><b>Milestone Slides</b></h2>
-
-        <p><a href="https://docs.google.com/presentation/d/1OH7ctlgpcokAWNUnIhgt9W3Hku62UYP2P92bHuNnEes/edit?usp=sharing" target="_blank">These slides</a> are used to complement the milestone video. They also contain the narrative blueprints for next week's plan.</p>
-
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRNh-8v9bS9A78aWZJ4p3CAsxg_ed1LT1b4_gfjDrzEQuSBRfv7rsxlhuQ7-6u3VYqhqFdxf05w2B-E/embed?start=false&loop=false&delayms=5000" frameborder="0" width="640" height="404" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-        <h2 id="updated-resources"><b>Updated Resources</b></h2>
+        <h2 id="resources"><b>Resources</b></h2>
 
         <p>The libraries we've taken advantage of most thus far include three.js, node.js, and ammo.js, among others. The collision shattering effects is built upon on the <a href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_physics_convex_break.html">the convex object breaker</a> by three.js.</p>
 
@@ -179,7 +143,14 @@
             <li><a href="https://github.com/kripken/ammo.js/" target="_blank">Ammo.js</a></li>
             <li><a href="https://threejs.org/docs/#api/core/Raycaster" target="_blank">Raycaster</a></li>
         </ul>
+				
+		<h2 id="contributions"><b>Contributions</b></h2>
 
+		<ul>
+			<li><b>Gan Tu</b>: <font color="red">Insert Contribution</font></li>
+			<li><b>Michael Gibbes</b>: <font color="red">Insert Contribution</font></li>
+			<li><b>Noah Jacobs</b>: <font color="red">Insert Contribution</font></li>
+		</ul>
 
 			</div>
 			<!-- End Post Content -->
