@@ -108,6 +108,7 @@
         <h2 id="technical"><b>Technical Approach</b></h2>
 
         <ol>
+			The Three.Js Convex Breaker (linked in resources) served as the starter code for our project. We analyzed what the code was doing and then improved existing functionality and added additional features.
         	<li><b>General Pipeline</b>:
 			<ul>
 				<li>Initialize scene and camera.</li>	
@@ -121,12 +122,16 @@
 			<ul>
 				<li><b>Summary</b> - If the force at the impact points between two colliding objects have reached a threshold defined for the object based on its mass and physics properties, subdivide the object into pieces. At the point of impact, randomly choose a 2D plane with given a given predefined angle range from the normal at the impact point. Cut the given object into two pieces of sub-objects debris based on the 2D plane. Recursively subdivide the two sub-object debris into smaller pieces until the termination conditions are met: (1) max number of iteration has reached; (2) stopped probabilistically by Russian Roulette; (3) the size of the debris to subdivide has reached a minimum size. Add final subdivided small debris into the scene. Remove the original major object from the scene. Rerender the scene.</li>
 				<li><b>Technical Problems</b> - Normal mesh loaded from online object files have varied configurations. Some are missing vertex normals, some are missing face normals, some are missing texture UV coordinates, etc. Also, Three.js Convex Breaker only accepts convex geometry, but mesh objects are usually not. It is very hard to directly plug and use existing function code base online to custom mesh geometry. Lots of time have been spent figuring out how to integrate custom mesh files (bunny, teapot, etc.) with the subdivision algorithm.</li>
-				<li><b>Solutions</b> - Walk through the vertices of mesh objects and recreate the geometry ourselves using three.js BufferGemetry and recalculate normals and other definitions as needed. A convex hull of the mesh based on its vertices was created. Unfortunately, this hull sometimes creates faces where it shouldn't, especially for more complex shapes like the Stanford Bunny. One proposed solution was to create small, "mini" convex meshes and break these on impact. This solution was attempted but very computationally heavy, and results in the illusion of a hollow structure.</li>
+				<li><b>Solutions</b> - Walk through the vertices of mesh objects and recreate the geometry ourselves using three.js BufferGeometry and recalculate normals and other definitions as needed. A convex hull of the mesh based on its vertices was created. Unfortunately, this hull sometimes creates faces where it shouldn't, especially for more complex shapes like the Stanford Bunny. One proposed solution was to create small, "mini" convex meshes and break these on impact. This solution was attempted but discarded due to being very computationally heavy.</li>
 			</ul>
 			</li>
 			<li><b>Ball and Scene Interaction</b>:
 			<ul>
-				<li><b>Summary</b> -</li>
+				<li>Upon a mouse click event, obtain the mouse coordinates.</li>
+				<li>Cast a directional ray from the camera position to the mouse coordinates.</li>
+				<li>Create and load a sphere geometry (ball) with custom parameters and textures into the scene.</li>
+				<li>Using Ammo.js functionalities, add a ball into the simulation world (defined inherently by C Bullet Physics) with directional ray calculated in last step and a given uniform velocity.</li>
+				<li>At each rendering step, simulate delta timestamps for the simulation world. If the ball hits anything in the scene and the object is breakable, the steps described above are performed.</li>
 			</ul>
 			</li>
 			<li><b>Explosion of Mesh</b>:
