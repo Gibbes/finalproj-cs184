@@ -109,6 +109,7 @@
 
         <ol>
 			The Three.Js Convex Breaker (linked in resources) served as the starter code for our project. We analyzed what the code was doing and then improved existing functionality and added additional features.
+			<br>
         	<li><b>General Pipeline</b>:
 			<ul>
 				<li>Initialize scene and camera.</li>	
@@ -155,7 +156,9 @@
 			<br>
 			<li><b>Flying Particles and Object Addition</b>:
 			<ul>
-				<li><font color="red">Insert Lessons</font></li>	
+				<li>For the flying particles, in the spirit of a vertex shader, we move and spawn the points (particles) in different sin wave patterns for its x, y, z coordinates, so in aggregate its trajectories look and feel random. It adds an air of mystery to the center of Stonehenge.</li>	
+				<li>Each object placement is "overloaded" into its own function so we can put the objects back into the scene after they have been destroyed or exploded.</li>	
+				<li>We also set random locations for object addition such as balls and stones to achieve unexpected massive destruction effects.</li>
 			</ul>
 			</li>
         </ol>
