@@ -118,13 +118,21 @@
 				<li>Rendering loop that applies updated GUI parameters and vertex positions based on physics engine.</li>
 			</ul>
 			</li>
+			<br>
 			<li><b>Breakable Objects</b>:
 			<ul>
-				<li><b>Summary</b> - If the force at the impact points between two colliding objects have reached a threshold defined for the object based on its mass and physics properties, subdivide the object into pieces. At the point of impact, randomly choose a 2D plane with given a given predefined angle range from the normal at the impact point. Cut the given object into two pieces of sub-objects debris based on the 2D plane. Recursively subdivide the two sub-object debris into smaller pieces until the termination conditions are met: (1) max number of iteration has reached; (2) stopped probabilistically by Russian Roulette; (3) the size of the debris to subdivide has reached a minimum size. Add final subdivided small debris into the scene. Remove the original major object from the scene. Rerender the scene.</li>
+				<li><b>Summary</b> - If the force at the impact points between two colliding objects have reached a threshold defined for the object based on its mass and physics properties, subdivide the object into pieces. At the point of impact, randomly choose a 2D plane with given a given predefined angle range from the normal at the impact point. Cut the given object into two pieces of sub-objects debris based on the 2D plane. Recursively subdivide the two sub-object debris into smaller pieces until the termination conditions are met:</li>
+				<li>(1) max number of iteration has reached</li>
+				<li>(2) stopped probabilistically by Russian Roulette</li>
+				<li>(3) the size of the debris to subdivide has reached a minimum size</li>
+				<li>Add final subdivided small debris into the scene. Remove the original major object from the scene. Rerender the scene.</li>
+				<br>
 				<li><b>Technical Problems</b> - Normal mesh loaded from online object files have varied configurations. Some are missing vertex normals, some are missing face normals, some are missing texture UV coordinates, etc. Also, Three.js Convex Breaker only accepts convex geometry, but mesh objects are usually not. It is very hard to directly plug and use existing function code base online to custom mesh geometry. Lots of time have been spent figuring out how to integrate custom mesh files (bunny, teapot, etc.) with the subdivision algorithm.</li>
+				<br>
 				<li><b>Solutions</b> - Walk through the vertices of mesh objects and recreate the geometry ourselves using three.js BufferGeometry and recalculate normals and other definitions as needed. A convex hull of the mesh based on its vertices was created. Unfortunately, this hull sometimes creates faces where it shouldn't, especially for more complex shapes like the Stanford Bunny. One proposed solution was to create small, "mini" convex meshes and break these on impact. This solution was attempted but discarded due to being very computationally heavy.</li>
 			</ul>
 			</li>
+			<br>
 			<li><b>Ball and Scene Interaction</b>:
 			<ul>
 				<li>Upon a mouse click event, obtain the mouse coordinates.</li>
@@ -134,11 +142,17 @@
 				<li>At each rendering step, simulate delta timestamps for the simulation world. If the ball hits anything in the scene and the object is breakable, the steps described above are performed.</li>
 			</ul>
 			</li>
+			<br>
 			<li><b>Explosion of Mesh</b>:
 			<ul>
-				<li><font color="red">Insert Lessons</font></li>	
+				<li>To explode a mesh, we first remove the original mesh object from the scene.</li>	
+				<li>A point cloud system is generated from the mesh vertex positions.</li>	
+				<li>If there are not enough points, we recursively create more points by lerping between existing points, similar to the idea of the Catmull-Clark Loop Subdivision.</li>	
+				<li>In each rendering loop, we recalculate the positions of each point and rerender the scene given the time delta and speed. As time goes, it will look like an explosion effect.</li>	
+				<li>Free any disposed geometry’s memory in browser to avoid memory leaks.</li>
 			</ul>
 			</li>
+			<br>
 			<li><b>Flying Particles and Object Addition</b>:
 			<ul>
 				<li><font color="red">Insert Lessons</font></li>	
